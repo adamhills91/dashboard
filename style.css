@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 4fr;
+}
+
+.sidebar {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  background: #1992D3;
+  padding: 25px;
+  z-index: 2;
+  box-shadow: 2px 0 5px 0 #c7c6c6;
+}
+
+.logo {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.logo-img img {
+  width: 40px;
+  height: 40px;
+}
+
+.logo h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+nav {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 90px;
+}
+
+nav ul {
+  list-style: none;
+  display: grid;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+.icon img {
+  width: 25px;
+  height: 25px;
+}
+
+header {
+  box-shadow: 0 4px 10px 0 #c7c6c6;
+  z-index: 1;
+  padding: 20px 60px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+.header-icon {
+  background: black;
+  min-width: 25px;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+
+.header-row div {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.search {
+  width: 100%;
+  align-items: center;
+}
+
+.search-bar {
+  background-color: #E2E8F0;
+  min-width: 100px;
+  height: 40px;
+  border-radius: 50px;
+  flex: 1;
+}
+
+#top-right {
+  min-width: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.profile-img {
+  background-color: #ffbf00;
+  min-width: 50px;
+  height: 50px;
+  border-radius: 100px;
+}
+
+.profile-img-lg {
+  min-width: 70px;
+  height: 70px;
+}
+
+.name {
+  font-size: 1.5rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
+#greeting {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+
+#greeting p {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+#greeting h2 {
+  font-size: 1.6rem;
+}
+
+#bottom-right {
+  gap: 40px;
+}
+
+#bottom-right button {
+  background: #1992D3;
+  color: white;
+  border: none;
+  padding: 14px 34px;
+  border-radius: 100px;
+  font-size: 1.2rem;
+}
+
+.content {
+  background: #E2E8F0;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 40px;
+  padding: 40px 20px 100px;
+}
+
+.content div {
+  width: 100%;
+}
+
+#projects {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+#announcements {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 20px;
+}
+#trending {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 20px;
+}
+
+
+#project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 10px;
+  border-left: 10px solid #ffbf00;
+  box-shadow: 0 5px 10px #c7c6c6;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr 2fr 1fr;
+  transition: all 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.04);
+}
+
+.card h3, .card p {
+  grid-column: 1 / 3;
+}
+
+.card p, .announcement p, #trending p {
+  color: #585858;
+}
+
+.card-icons {
+  padding-right: 20px;
+  display: flex;
+  gap: 30px;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.card-icons .icon {
+  width: 25px;
+  height: 25px;
+}
+
+.right-side-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px #c7c6c6;
+}
+
+.announcement {
+  border-bottom: 1px solid #c7c6c6;
+  padding: 20px 5px 20px;
+}
+
+.announcement:last-child {
+  border: none;
+}
+
+.announcement h4 {
+  margin-bottom: 4px;
+}
+.announcement p {
+  font-size: 0.9rem;
+}
+
+#trending .right-side-card {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+#trending p {
+  font-size: 0.9rem;
+}
+
+@media only screen and (min-width: 1984px) {
+  .card {
+    min-height: 300px;
+  }
+}
